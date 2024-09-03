@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+.accreditation-header {
+
+    background-color: #0d2948; /* Adjust to match the exact dark blue color */
+    color: #ffffff; /* White text */
+    text-align: left;
+    padding: 20px 10%; /* Padding with margins */
+    margin-bottom: 30px;
+    width: 68pc; /* Full width */
+    margin-top: 20px;
+    margin-left: 30px;
+   
+}
+
+.accreditation-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.accreditation-content {
+    margin: 0 10%; /* Margin from left and right */
+    padding-bottom: 30px;
+}
+
+.accreditation-content h3 {
+    font-size: 24px;
+    color: #01346b; /* Dark Blue for Subheading */
+    margin-bottom: 20px;
+}
+
+.accreditation-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #2b3e50;
+}
+
+.accreditations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+
+.accreditation {
+    flex-basis: 18%; /* Adjust to fit five images */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accreditation img {
+    width: 150px; /* Fixed width for all images */
+    height: 150px; /* Fixed height for all images */
+    object-fit: contain; /* Ensures the image fits within the box while maintaining aspect ratio */
+    display: inline-block; /* Keeps images inline and centered */
+    margin: 10px; /* Adds some space around each image */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accreditation-header {
+        padding: 20px 10%; /* Increased padding for larger screens */
+        width: 70%; /* More space for larger screens */
+    }
+
+    .accreditation-header h2 {
+        font-size: 28px; /* Fixed font size for tablets and larger screens */
+    }
+
+    .accreditation-content {
+        margin: 0 10%; /* Increased margin for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .accreditation {
+        flex-basis: 100%; /* One per row on mobile */
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .accreditation-header {
+        width: 55%; /* Return to specific width for large screens */
+    }
+
+    .accreditation-header h2 {
+        font-size: 32px; /* Larger font size for very large screens */
+    }
+}

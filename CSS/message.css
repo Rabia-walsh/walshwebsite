@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.president-message-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.president-image {
+    flex: 1 1 300px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.president-image img {
+    width: 102%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5%;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.president-message {
+    flex: 2 1 400px;
+}
+
+.president-message h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d2948;
+}
+
+.president-message p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .president-message-container {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .president-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .president-message h2 {
+        font-size: 24px;
+    }
+
+    .president-message p {
+        font-size: 16px;
+    }
+}

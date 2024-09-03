@@ -1,0 +1,230 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec1 .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Make sure the video covers the entire area */
+}
+/*---------------------------*/
+.white-box {
+    background-color: white;
+    margin-top: 30vw;
+    padding: 30px;
+    width:63vw;
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make the white box a flex container */
+    justify-content: space-between; /* Space between the content and the right-links */
+    text-align: left;
+    z-index: 1;
+}
+/*--------------------------------*/
+.content-with-line {
+    display: flex;
+    align-items: center;
+}
+
+.blue-line {
+    margin-top: 4vw;
+    width: 3vw;
+    height: 26vh;
+    background-color: #083464;
+    margin-right: 10px;
+}
+/*--------------------------------*/
+.text-content {
+    margin-top: -1.5vw;
+    margin-bottom: -3vw;
+    text-align: left; /* Align text to the left of the box */
+}
+.text-content h1 {
+    margin-top: -.5vw;
+}
+.text-content p {
+    margin-top: -1.2vw;
+    line-height: 1.2; /* Adjust the line height */
+    color: black;
+}
+/*-----------------------------------------------*/
+.right-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the links vertically */
+    padding-left: 5vw;
+    padding-right: 3vw;
+    padding-top: 5%;
+}
+
+.right-links ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 25px;
+}
+
+.right-links li {
+    margin-bottom: 10px; /* Space between links */
+    margin-left: -1vw;
+    line-height: 1.6; /* Adjust the line height */
+    position: relative;
+    
+
+}
+.right-links a {
+    text-decoration: none;
+    color: #083464; /* Link color */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.right-links a:hover{
+    text-decoration: dotted;
+    color: blue;
+}
+.right-links a::before {
+    content: '\2192'; /* Unicode for right arrow */
+    margin-right: 8px; /* Space between arrow and text */
+    color: #083464; /* Same color as link */
+}
+/*---------------------------------*/
+#history{
+    margin-top: 4vw;  
+    padding: 60px;
+}
+.history-section h1 {
+    margin-top: -2vw;
+    color: #083464;
+    text-decoration: underline;
+    font-weight: 800;
+    text-align: center;
+}
+.flashcards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 15px;
+}
+.flashcard {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+.flashcard img{
+    width: 27vw;
+    height: 43vh;
+    border-radius: 10px ;
+    padding-bottom: 7px;
+}
+.flashcard:hover {
+    transform: translateY(-10px);
+}
+.flashcard p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: black;
+}
+/*-----------------Mission section----------------*/
+#mission{
+    margin-top: 1.5vw;
+    padding: 70px;
+    background-color: #083464 /*rgb(212, 224, 234)*/;
+    color: white;
+}
+.mission-section h1 {
+    margin-top: -5vw;
+    color: white;
+    text-decoration: underline;
+    font-weight: 800;
+    text-align: left;
+}   
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mission-section ul {
+    list-style-type: circle; /* Change bullet type if needed */
+    padding-left: 20px; /* Adjust spacing */
+}
+
+.mission-section li {
+    margin-bottom: 20px; /* Add space between bullet points */
+}
+
+.mission-section h2 {
+    margin-bottom: 8px; /* Space between heading and text */
+}
+
+.mission-section p {
+    margin: 0;
+    color: white;
+}
+.mission-section img {
+    width: 32%; /* Adjust width as needed */
+    margin-left: 20px; /* Add space between text and image */
+    border-radius: 8px;
+}
+/*-----------------Acc section----------------*/
+#acc{
+    margin-top: 1.5vw;
+    padding: 70px;  
+}
+.acc-section h1 {
+    margin-top: -1vw;
+    color: #083464;
+    text-decoration: underline;
+    font-weight: 800;
+    text-align: center;
+}  
+.accreditation-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between the two accreditation items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.accreditation-item {
+    flex: 1;
+    min-width: 250px; /* Adjust this as needed */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.accreditation-item h2 {
+    margin-top: 1.5vw;
+    margin-bottom: 3vw;
+    justify-content: center ;
+    text-decoration: underline;
+}
+.accreditation-item p {
+    padding: 22px;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: left;
+    color: black;
+}
+.accreditation-item img {
+    width: 10vw;
+    height: 24vh;
+    margin-bottom: 1px;
+}
+/*-----------------Acc section end----------------*/

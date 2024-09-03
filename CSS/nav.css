@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: #003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a img {
+    height: 70px; /* Increased height */
+    width: auto;  /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 12px; /* Adjust font size */
+    font-family: 'Verdana', sans-serif; /* Change font family */
+}
+
+.nav-links li {
+    position: relative;
+    margin-right: 10px; /* Space between navigation items */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+}
+
+/* Dropdown icon styles */
+.dropdown-icon {
+    font-size: 9px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+/* Rotate the dropdown icon when the menu is active */
+.nav-links .active > a .dropdown-icon {
+    transform: rotate(180deg); /* Rotate the icon to point upwards */
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #e55318; /* Line color */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0; /* Position the underline at the bottom of the text */
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Underline matches the width of the text */
+}
+
+/* Specific styles for APPLY NOW button */
+.apply-btn {
+    background-color: #800000; /* Dark red/maroon background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.apply-btn::after {
+    display: none; /* Remove underline effect */
+}
+
+.apply-btn:hover {
+    background-color: #e90000; /* Darker shade for hover effect */
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Dropdown background color */
+    list-style: none;
+    padding: 0;
+    margin: 15px 0; /* Space between dropdowns and parent items */
+    z-index: 1000;
+    width: 250px; /* Increased width for dropdown menus */
+    font-size: 12px; /* Adjust font size for dropdown items */
+    font-family: 'Verdana', sans-serif; /* Change font family */
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Dropdown background color */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove margin around sub-menu */
+    z-index: 1000;
+    width: 250px; /* Increased width for sub-menus */
+    top: 0;
+    left: 100%; /* Align sub-menu to the right of the parent */
+}
+
+/* Add margin around content in dropdowns and sub-menus */
+.dropdown-menu a,
+.sub-menu a {
+    padding: 10px;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+/* Underline effect */
+.dropdown-menu a::after,
+.sub-menu a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #e55318; /* Line color */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 5px; /* Position the underline slightly above the margin */
+    left: 10px; /* Position the underline within the margin */
+}
+
+.dropdown-menu a:hover::after,
+.sub-menu a:hover::after {
+    width: calc(75% - 20px); /* Underline stays within the margin */
+}
+
+.sub-dropdown .sub-menu {
+    left: 100%;
+    top: 0;
+}
+
+/* Show the dropdown menu when parent li has class active */
+.nav-links .active > .dropdown-menu,
+.nav-links .active > .sub-menu {
+    display: block;
+}
+
+/* Toggler Button Styles */
+.nav-toggler {
+    display: none;
+    background-color: #003366;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toggler-icon {
+    font-size: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        background-color: #003366; /* Same as navbar background */
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        margin-top: 34px;
+    }
+
+    .nav-links .dropdown-menu,
+    .nav-links .sub-menu {
+        position: static; /* Ensure dropdowns stack vertically */
+        width: 100%; /* Full width for dropdowns */
+    }
+
+    .nav-toggler {
+        display: block;
+    }
+
+    .logo img {
+        height: 50px; /* Adjust logo size for smaller screens */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Larger font size for readability on mobile */
+    }
+}
+
+
+.content-wrapper {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.benefits-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background-color: #003366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .benefits-section {
+        flex-direction: column;
+    }
+    
+    .benefit-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* Specific styles for APPLY NOW button */
+.apply-btn {
+    background-color: #800000; /* Dark red/maroon background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}

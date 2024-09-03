@@ -1,0 +1,257 @@
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+/* General container styles */
+.program-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title styles */
+.program-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0a3063;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Options container */
+.program-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+h3{
+    color: #0a3063;
+}
+/* Individual option styles */
+.option {
+    flex: 1 1 calc(33.333% - 10px);
+    text-align: center;
+    padding: 10px;
+    background-color: #0a3063;
+    color: #ffffff;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Active (selected) option styles */
+.option.active {
+    background-color: #ff4136; /* Red background for the selected option */
+    color: #ffffff; /* Keep text color white when active */
+}
+
+.option:hover {
+    background-color: #ff4136;
+}
+
+/* Content container */
+.program-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.program-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a3063;
+    margin-bottom: 10px;
+}
+
+.program-content p {
+    margin-bottom: 10px;
+}
+
+/* Course structure table styles */
+.course-structure {
+    width: 80%; /* Reduced the width of the table */
+    margin: 0 auto;
+}
+
+.course-structure table {
+    width: 100%; /* Make sure the table takes up the full width of its container */
+    border-collapse: collapse;
+    margin: 10px 0; /* Reduced margin for a more compact look */
+    font-size: 14px; /* Slightly reduced font size */
+    text-align: left;
+}
+
+.course-structure th, .course-structure td {
+    padding: 5px 8px; /* Reduced padding for a more compact height */
+    border: 1px solid #333; /* Dark border */
+}
+
+.course-structure th {
+    background-color: #0a3063;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.course-structure td {
+    background-color: #fff; /* White background for cells */
+    color: #333;
+}
+
+.course-structure td:nth-child(1), .course-structure th:nth-child(1) {
+    width: 33%;
+}
+
+.course-structure td:nth-child(2), .course-structure th:nth-child(2) {
+    width: 33%;
+}
+
+.course-structure td:nth-child(3), .course-structure th:nth-child(3) {
+    width: 33%;
+}
+/* General container for entry criteria */
+.entry-criteria {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    color: #000; /* Black text color */
+}
+
+/* Style for the left section */
+.criteria-left {
+    width: 48%;
+}
+
+/* Style for the right section */
+.criteria-right {
+    width: 48%;
+}
+
+/* Bold text */
+.bold {
+    font-weight: bold;
+}
+
+/* Title style */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* General paragraph style */
+.entry-criteria p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .entry-criteria {
+        flex-direction: column;
+    }
+    .criteria-left, .criteria-right {
+        width: 100%;
+    }
+}
+
+/* Responsive Design for Tablets and Below */
+@media (max-width: 1024px) {
+    .option {
+        flex: 1 1 calc(50% - 10px);
+        font-size: 16px;
+    }
+
+    .program-content {
+        padding: 15px;
+    }
+
+    .program-content h2 {
+        font-size: 22px;
+    }
+
+    .program-title {
+        font-size: 24px;
+    }
+
+    .course-structure {
+        width: 90%; /* Slightly increase width on tablets */
+    }
+
+    .course-structure th, .course-structure td {
+        padding: 4px 6px; /* Further reduced padding on smaller screens */
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .option {
+        flex: 1 1 100%;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .program-content {
+        padding: 10px;
+    }
+
+    .program-content h2 {
+        font-size: 20px;
+    }
+
+    .program-title {
+        font-size: 20px;
+    }
+
+    .course-structure {
+        width: 100%; /* Full width on mobile devices */
+    }
+
+    .course-structure table, .course-structure tbody, .course-structure th, .course-structure td, .course-structure tr {
+        display: block;
+    }
+
+    .course-structure thead {
+        display: none;
+    }
+
+    .course-structure tr {
+        margin-bottom: 15px;
+    }
+
+    .course-structure td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .course-structure td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .course-structure td:last-child {
+        margin-bottom: 0;
+    }
+}

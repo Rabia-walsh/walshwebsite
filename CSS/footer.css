@@ -1,0 +1,139 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+footer {
+    margin: 0;
+    padding: 20px 0; /* Adjust the padding if needed */
+    width: 100%;
+    background-color: #003366;
+    box-sizing: border-box;
+    color: white; /* Optional: Set text color to white for contrast */
+    
+  }
+  
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+	margin-left: 5vh;
+	margin-right: 5vh;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    line-height: 1.6; /* Increase line height to add space between lines */
+    padding-bottom: 4px; /* Optional: Adds extra space between text and the line */
+}
+
+.footer-section ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjust if you add padding-bottom to align the line correctly */
+    width: 0;
+    height: 2px;
+    background-color: #e55318;
+    transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover::after {
+    width: 100%;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color:  #003366;
+    font-size: 24px;
+    width: 40px;        /* Width of the square */
+    height: 40px;       /* Height of the square */
+    line-height: 40px;  /* Centers the icon vertically */
+    background-color: #b6b6b6; /* Background color of the square */
+    text-align: center;
+    margin: 0 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Removes the circle, making it a square */
+	margin-top: 5px;
+}
+
+.social-icons a:hover {
+    background-color: #e55318; /* Adjust hover background color */
+    color: #fff; /* Hover icon color */
+}
+
+#subscription-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+#subscription-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    font-size: 14px;
+    width: 70%;
+    outline: none;
+}
+
+#subscription-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e55318;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#subscription-form button:hover {
+    background-color: darkred;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
