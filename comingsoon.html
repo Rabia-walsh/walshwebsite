@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(' Assets/walshusa.jpeg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .coming-soon-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-style: italic;
+            animation: fadeInDown 1.5s ease-in-out;
+            position: relative;
+        }
+
+        .content h1::before,
+        .content h1::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background: #e55318;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: slideIn 2s ease-in-out infinite alternate;
+        }
+
+        .content h1::before {
+            left: -120px;
+        }
+
+        .content h1::after {
+            right: -120px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            animation: fadeInUp 2s ease-in-out;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50%) scaleX(0); }
+            100% { transform: translateY(-50%) scaleX(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="coming-soon-container">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Coming Soon</h1>
+            <p>We're working hard to launch our new website!</p>
+        </div>
+    </div>
+</body>
+</html>
